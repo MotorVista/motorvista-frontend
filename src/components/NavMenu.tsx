@@ -1,7 +1,7 @@
 function NavMenu () {
     return(
         <>
-            <div id="test">test</div>
+            <div id="menuBar"></div>
         </>
     )
 }

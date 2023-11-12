@@ -4,7 +4,15 @@ function CarPage (){
     return (
         <>
             <NavMenu></NavMenu>
-            <h1>dsds</h1>
+            <div id="titleBlock">
+                <div id="light"></div>
+            </div>
+            <div className="imageBlock"></div>
+            <div className="infoBlock"></div>
+            <div className="imageBlock"></div>
+            <div className="infoBlock"></div>
+            <div id="priceInfo"></div>
+            <div id="footer"></div>
         </>
     )
 }
