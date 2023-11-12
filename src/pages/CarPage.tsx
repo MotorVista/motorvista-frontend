@@ -1,7 +1,10 @@
+import NavMenu from "../components/NavMenu";
+
 function CarPage (){
     return (
         <>
-            <h1>Car Page</h1>
+            <NavMenu></NavMenu>
+            <h1>dsds</h1>
         </>
     )
 }
