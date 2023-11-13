@@ -13,6 +13,7 @@ function CarPage (){
                 </div>
             </div>
             <div className="imageBlock">
+                <div className="vingette"></div>
                 <div className="imageContainer">
                     <img src="../assets/images/engine_view.png" alt="engine model" />
                 </div>
@@ -22,9 +23,101 @@ function CarPage (){
                     <div className="headerDesc">B46B2001</div>
                 </div>
             </div>
-            <div className="infoBlock"></div>
+            <div className="infoBlock">
+                <div className="header">Engine specs</div>
+                <div className="tableContainer">
+                    <table>
+                        <tr>
+                            <td>Power</td>
+                            <td>
+                                <div>
+                                    <p>258 HP</p>
+                                    <p>5000-6000 RPM <img src="../assets/images/icons/power_ico.png"/>
+                                    </p>
+                                </div>
+                            </td>
+                            <td>94.6 mm</td>
+                            <td>Stroke</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel</td>
+                            <td>
+                                <div>
+                                    <p>Petrol</p>
+                                    <p>5.9-6.3 l/100km <img src="../assets/images/icons/fuel_type_ico.png"/>
+                                    </p>
+                                </div>
+                            </td>
+                            <td>82mm</td>
+                            <td>Bore</td>
+                        </tr>
+                        <tr>
+                            <td>Torque</td>
+                            <td>
+                                <div>
+                                    <p>400 NM</p>
+                                    <p>1500-4400 RPM <img src="../assets/images/icons/torque_ico.png"/>
+                                    </p>
+                                </div>
+                            </td>
+                            <td>
+                                4
+                            </td>
+                            <td>Cylinders</td>
+                        </tr>
+                        <tr>
+                            <td>Compression ratio</td>
+                            <td>10.2</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                        <tr>
+                            <td>other specs..</td>
+                            <td>***</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                        <tr>
+                            <td>other specs..</td>
+                            <td>***</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                        <tr>
+                            <td>other specs..</td>
+                            <td>***</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                        <tr>
+                            <td>other specs..</td>
+                            <td>***</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <div className="imageBlock"></div>
-            <div className="infoBlock"></div>
+            <div className="infoBlock">
+            <div className="header">Wheels specs</div>
+                <div className="tableContainer">
+                    <table>
+                        <tr>
+                            <td>other specs..</td>
+                            <td>***</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                        <tr>
+                            <td>other specs..</td>
+                            <td>***</td>
+                            <td>***</td>
+                            <td>other specs..</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <div id="priceInfo"></div>
             <div id="footer"></div>
         </>
