@@ -1,3 +1,5 @@
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body, html {
 #menuBar {
     background-color: black;
     width: 100%;
-    height: 70px;
+    height: 6.5vh;
 }
 
 
@@ -57,18 +59,73 @@ body, html {
         width: 100%;
         height: 100%;
         z-index: 4;
+
+        #icon {
+            position: absolute;
+            width: 7%;
+            top: 0;
+            left: 0;
+        }
+
+        #car {
+            position: absolute;
+            width: 85%;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
 /* Content */
 
 .imageBlock {
-    width: 100%;
-    height: 100vh;
+    position: relative;
+    width: calc(100% - 20vh);
+    height: 90vh;
     background-color: #4e4f52;
+    padding: 0 10vh 0 10vh;
+
+    .imageContainer {
+        position: absolute;
+        top: 7.5vw;
+        left: 7.5vw;
+        width: 46vw;
+        height: 46vw;
+        background-color: #434447;
+        border-radius: 5%;
+
+        & img {
+            position: absolute;
+            bottom: 0;
+            left: -7%;
+            width: 116%;
+        }
+    }
+
+    .header {
+        position: absolute;
+        top: 50%;
+        left: 58.5vw;
+        transform: translateY(-50%);
+        color: #fff;
+
+        #icon {
+            width: 15%;
+        }
+
+        .headerText {
+            
+        }
+
+        .headerDesc {
+
+        }
+    }
 }
 
 .infoBlock {
+    position: relative;
     width: 100%;
     height: 100vh;
     background-color: #000;
