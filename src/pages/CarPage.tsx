@@ -14,8 +14,8 @@ function CarPage (){
             </div>
             <div className="imageBlock leftSide">
                 <div className="vingette"></div>
-                <div className="imageContainer">
-                    <img className="centerBottom" src="../assets/images/engine_view.png" alt="engine model" />
+                <div className="imageContainer centerBottom">
+                    <img src="../assets/images/engine_view.png" alt="engine model" />
                 </div>
                 <div className="header">
                     <img src="../assets/images/icons/engine_ico.png" alt="engine icon" className="icon" />
@@ -100,8 +100,8 @@ function CarPage (){
             </div>
             <div className="imageBlock rightSide">
                 <div className="vingette"></div>
-                <div className="imageContainer">
-                    <img className="centerRight" src="../assets/images/wheel_view.png" alt="wheel model" />
+                <div className="imageContainer centerRight">
+                    <img src="../assets/images/wheel_view.png" alt="wheel model" />
                 </div>
                 <div className="header">
                     <img src="../assets/images/icons/wheel_ico.png" alt="engine icon" className="icon" />
@@ -128,7 +128,20 @@ function CarPage (){
                     </table>
                 </div>
             </div>
-            <div id="priceInfo"></div>
+            <div id="priceInfo">
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsпасхалка_лолsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+            </div>
             <div id="footer"></div>
         </>
     )

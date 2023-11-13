@@ -14,6 +14,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Top menu CSS */
@@ -120,15 +121,44 @@ body, html {
         & img {
             position: absolute;
             bottom: 0;
-            left: -7%;
             width: 116%;
         }
+    }
 
-        .centerRight {
+    .centerBottom {
+        clip-path: inset( -100vw -100vw 0 -100vw );
+
+        & img {
+            left: -7%;
+            bottom: -5%;
+        }
+    }
+
+    .centerRight {
+        clip-path: inset( 0 0 0 -100vw );
+
+        & img {
             left: -16%;
         }
     }
 
+    .centerTop {
+        clip-path: inset( 0 -100vw -100vw -100vw );
+
+        & img {
+            top: -5%;
+        }
+    }
+    
+    .centerLeft {
+        clip-path: inset( -100vw 0 0 0 );
+
+        & img {
+            left: 0;
+            right: -16%;
+        }
+    }
+    
     .header {
         position: absolute;
         top: 50%;
@@ -165,6 +195,11 @@ body, html {
         left: 0;
         right: 90vmin;
         text-align: right;
+
+        .icon {
+            margin-left: 0;
+            margin-right: 12%;
+        }
     }
 
     .vingette {
@@ -254,6 +289,12 @@ body, html {
     width: 100%;
     height: 200px;
     background-color: #c44b4b;
+    font-family: 'Aquire Bold', Calibri;
+
+    & p {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 /* Footer */
