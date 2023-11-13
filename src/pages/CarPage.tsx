@@ -12,19 +12,19 @@ function CarPage (){
                     <img id="car" src="../assets/images/car_model.png" alt="car model" />
                 </div>
             </div>
-            <div className="imageBlock">
+            <div className="imageBlock leftSide">
                 <div className="vingette"></div>
                 <div className="imageContainer">
-                    <img src="../assets/images/engine_view.png" alt="engine model" />
+                    <img className="centerBottom" src="../assets/images/engine_view.png" alt="engine model" />
                 </div>
                 <div className="header">
-                    <img src="../assets/images/icons/engine_ico.png" alt="engine icon" id="icon" />
+                    <img src="../assets/images/icons/engine_ico.png" alt="engine icon" className="icon" />
                     <div className="headerText">Engine</div>
                     <div className="headerDesc">B46B2001</div>
                 </div>
             </div>
             <div className="infoBlock">
-                <div className="header">Engine specs</div>
+                <div className="header">Engine specifications</div>
                 <div className="tableContainer">
                     <table>
                         <tr>
@@ -98,9 +98,19 @@ function CarPage (){
                     </table>
                 </div>
             </div>
-            <div className="imageBlock"></div>
+            <div className="imageBlock rightSide">
+                <div className="vingette"></div>
+                <div className="imageContainer">
+                    <img className="centerRight" src="../assets/images/wheel_view.png" alt="wheel model" />
+                </div>
+                <div className="header">
+                    <img src="../assets/images/icons/wheel_ico.png" alt="engine icon" className="icon" />
+                    <div className="headerText">Wheels</div>
+                    <div className="headerDesc">17`</div>
+                </div>
+            </div>
             <div className="infoBlock">
-            <div className="header">Wheels specs</div>
+            <div className="header">Wheels specifications</div>
                 <div className="tableContainer">
                     <table>
                         <tr>
