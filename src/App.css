@@ -11,29 +11,72 @@
     src: url(assets/fonts/AquireBold.otf);
 }
 
+:root {
+    --text-color: #fff;
+    --sec-text-color: #afafaf;
+    --menu-bg: #000;
+    --title-block-bg: #2f3135;
+    --img-block-bg: #4e4f52;
+    --img-bg: #434447;
+    --info-block-bg: #000;
+    --sec-block-bg: #2d2e30;
+    --icons-color: initial;
+    --accent-color: #c44b4b;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--menu-bg);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Top menu CSS */
 
 #menuBar {
-    background-color: black;
-    width: 100%;
+    background-color: var(--menu-bg);
+    width: calc(100% - 6vmax);
     height: 6.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vmax 0 3vmax;
+    color: var(--text-color);
+    font-family: 'Calibri';
+    font-size: 1.2vmax;
+
+    .left * {
+        margin-right: 1vmax;
+    }
+
+    .center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.8vmax;
+    }
 }
 
 
 /* Car page CSS */
 /* Title h0.9vh w0.65vw */
 
-#titleBlock {
+.titleBlock {
     position: relative;
     width: 100%;
     height: calc(100vmin - 6.5vmin);
-    background-color: #2f3135;
+    background-color: var(--title-block-bg);
     overflow: hidden;
     z-index: 3;
 
@@ -67,6 +110,8 @@ body, html {
     }
 
     .content {
+        display: flex;
+        align-items: center;
         position: relative;
         width: 100%;
         height: 100%;
@@ -87,15 +132,136 @@ body, html {
             transform: translate(-50%, -48vh);
         }
     }
+
+    .header {
+        height: 100%;
+        margin: 0 7vw 0 6vw;
+        color: var(--text-color);
+        width: 31vw;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        
+        & p {
+            font-family: 'Aquire Light';
+            font-size: 2vmax;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & a {
+            --underline-color: var(--text-color);
+            font-family: 'Calibri';
+            font-weight: lighter;
+            font-size: 1.5vmax;
+            margin: 0.2vmax 0 0.2vmax 0;
+        }
+
+        & button {
+            cursor: pointer;
+            margin-top: 1.6vmax;
+            background: none;
+            outline: none;
+            border: 0.15vmax solid var(--accent-color);
+            border-radius: 0.4vmax;
+            color: var(--accent-color);
+            font-size: 1.4vmax;
+            padding: 0.5vmax 1vmax;
+        }
+    }
+
+    .images {
+        margin-right: 5vw;
+        width: calc(100% - 14vw);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1vmax;
+
+        & a {
+            width: 28.8vw;
+            height: 19.2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--sec-text-color);
+            font-size: 1.2vmax;
+            font-family: 'Aquire';
+            background-color: rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: .2s;
+
+            & img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+
+            &:nth-child(4):active {
+                display: none;
+            }
+
+            &:nth-child(5) {
+                display: none;
+            }
+
+            &:nth-child(4):active {
+                + :nth-child(5) {
+                    display: flex;
+                }
+            }
+
+            &:hover, &:active {
+                filter: brightness(70%);
+            }
+        }
+    }
 }
 
 /* Content */
+
+.line {
+    margin: 1.6vmax 0 1.6vmax 0;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    width: 7vmax;
+    height: 0.2vmax;
+}
+
+.nameBlock {
+    position: relative;
+    width: 100%;
+    background-color: var(--sec-block-bg);
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Aquire';
+    color: var(--text-color);
+
+    & p:nth-child(1) {
+        font-size: 2.1vmax;
+    }
+
+    & p:nth-child(3) {
+        font-family: 'Calibri';
+        font-size: 1.4vmax;
+    }
+}
 
 .imageBlock {
     position: relative;
     width: calc(100% - 20vh);
     height: 90vmin;
-    background-color: #4e4f52;
+    background-color: var(--img-block-bg);
     padding: 0 10vh 0 10vh;
 
     .vingette {
@@ -115,7 +281,7 @@ body, html {
         margin-right: 10vmin;
         width: 70vmin;
         height: 70vmin;
-        background-color: #434447;
+        background-color: var(--img-bg);
         border-radius: 5%;
 
         & img {
@@ -164,7 +330,7 @@ body, html {
         top: 50%;
         left: 90vmin;
         transform: translateY(-50%);
-        color: #fff;
+        color: var(--text-color);
         text-align: left;
 
         .icon {
@@ -172,6 +338,7 @@ body, html {
             margin-bottom: 0.5vmax;
             margin-left: 50%;
             transform: translateX(-55%);
+            filter: var(--icons-color);
         }
 
         .headerText {
@@ -198,7 +365,8 @@ body, html {
 
         .icon {
             margin-left: 0;
-            margin-right: 12%;
+            margin-right: 5vw;
+            filter: var(--icons-color);
         }
     }
 
@@ -213,8 +381,8 @@ body, html {
     position: relative;
     width: 100%;
     min-height: 10vmin;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--info-block-bg);
+    color: var(--text-color);
     font-family: 'Aquire';
     text-align: center;
     padding: 2vmax 0 2vmax 0;
@@ -238,21 +406,20 @@ body, html {
             & div {
                 & p:nth-child(1) {
                     font-size: 1.4vmax;
-                    margin: 0;
                     margin-bottom: -0.1vmax;
-                    padding: 0;
                 }
                 & p:nth-child(2) {
                     font-size: 1.1vmax;
                     font-family: 'Aquire Light';
                     margin: 0.2vmax;
-                    padding: 0;
                 }
             }
 
             & img {
                 margin-bottom: -0.2vmax;
                 height: 1.1vmax;
+                filter: brightness(0) saturate(100%) invert(41%) sepia(17%) 
+                saturate(2191%) hue-rotate(315deg) brightness(95%) contrast(84%);
             }
         }
 
@@ -288,19 +455,79 @@ body, html {
 #priceInfo {
     width: 100%;
     height: 200px;
-    background-color: #c44b4b;
+    background-color: var(--accent-color);
     font-family: 'Aquire Bold', Calibri;
 
-    & p {
-        margin: 0;
-        padding: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Footer */
 
 #footer {
     width: 100%;
-    height: 250px;
-    background-color: #434447;
+    height: 10vmax;
+    background-color: var(--sec-block-bg);
+    align-items: center;
+    justify-content: center;
+    font-family: 'Calibri';
+    color: var(--text-color);
+    font-size: 1.1vmax;
+    display: flex;
+    flex-direction: column;
+
+    .upperBlock {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .line {
+        margin: 0.4vmax 0 0.4vmax 0;
+        border-radius: 10px;
+        background-color: var(--img-bg);
+        width: 90%;
+        height: 0.17vmax;
+    }
+
+    .lowerBlock {
+        width: 90%;
+        color: var(--sec-text-color);
+        display: flex;
+        justify-content: space-between;
+
+        .links * {
+            margin-right: 1vmax;
+            --underline-color: var(--sec-text-color);
+        }
+
+        .socialMedia * {
+            margin-left: 1vmax;
+        }
+    }
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.105vmax;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--underline-color);
+    transform-origin: bottom left;
+    transition: transform 0.2s ease-in;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
