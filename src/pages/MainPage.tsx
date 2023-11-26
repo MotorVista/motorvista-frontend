@@ -5,6 +5,12 @@ function Main() {
     return (
         <>
             <NavMenu></NavMenu>
+            <div className="submenu">
+                <a href="/list">Showcase</a>
+                <a href="">Service</a>
+                <a href="">Accessories</a>
+                <a href="">About us</a>
+            </div>
             <div className="titleBlock">
                 <div className="content">
                     <div className="header">
