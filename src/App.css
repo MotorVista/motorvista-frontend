@@ -724,7 +724,7 @@ label {
             }
 
             #showPass:checked {
-                + #loginPass {
+                ~ #loginPass {
                     -webkit-text-security: none;
                 }
 

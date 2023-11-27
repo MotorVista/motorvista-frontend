@@ -41,7 +41,27 @@ function Auth() {
                         </div>
                     </div>
                     <div className="register">
-                        <label htmlFor="toLogin">Login</label>
+                        <h1>Register</h1>
+                        <h3>to gain access for more functions</h3>
+                        <form action="">
+                            <label htmlFor="regName">Name:</label>
+                            <input type="text" id="regName"/>
+                            <label htmlFor="regEmail">Email:</label>
+                            <input type="email" id="regEmail"/>
+                            <input type="checkbox" name="showRegPass" id="showRegPass" hidden/>
+                            <label htmlFor="regPass">Password:</label>
+                            <input type="password" id="regPass" />
+                            <label htmlFor="confRegPass">Confirm password:</label>
+                            <input type="password" id="confRegPass" />
+                            <label htmlFor="showRegPass" id="showPassLabel2">Show passwords</label>
+                            <label htmlFor="showRegPass" id="hidePassLabel3" hidden>Hide passwords</label>
+                            <input type="submit" value="Submit" />
+                        </form>
+                        <div className="toRegisterBlock">
+                            <p>Already have an account?</p>
+                            <label htmlFor="toLogin">Go to login</label>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
