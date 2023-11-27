@@ -1,7 +1,31 @@
 import NavMenu from "../components/NavMenu";
 import Footer from "../components/Footer";
+import { useState, useEffect } from "react";
+import { API, checkResponse } from "../api";
 
 function CarPage (){
+    const [car, setCar] = useState({
+        power: undefined,
+        year: undefined,
+        model: undefined,
+        variation: undefined,
+        powerPerLitre: undefined,
+        bore: undefined,
+        torque: undefined,
+        stroke: undefined,
+        minTorqueRpm: undefined,
+        maxTorqueRpm: undefined,
+        cylinders: undefined,
+        compressionRate: undefined
+    });
+    useEffect(() => {
+        API.get("/car/1").then((res) => {
+            if (checkResponse(res)) {
+                setCar(res.data);
+            }
+        }).catch(e => alert(e));
+    }, []);
+
     return (
         <>
             <NavMenu></NavMenu>
@@ -14,7 +38,7 @@ function CarPage (){
                 </div>
             </div>
             <div className="nameBlock">
-                <p>2020 Toyota Supra MK5 A90</p>
+                <p>{car.year} {car.model} {car.variation}</p>
                 <div className="line"></div>
                 <p>An impressive car for an impressive people!</p>
             </div>
@@ -37,12 +61,12 @@ function CarPage (){
                             <td>Power</td>
                             <td>
                                 <div>
-                                    <p>258 HP</p>
+                                    <p>{car.power} HP</p>
                                     <p>5000-6000 RPM <img src="../assets/images/icons/power_ico.png"/>
                                     </p>
                                 </div>
                             </td>
-                            <td>94.6 mm</td>
+                            <td>{car.stroke} mm</td>
                             <td>Stroke</td>
                         </tr>
                         <tr>
@@ -50,30 +74,30 @@ function CarPage (){
                             <td>
                                 <div>
                                     <p>Petrol</p>
-                                    <p>5.9-6.3 l/100km <img src="../assets/images/icons/fuel_type_ico.png"/>
+                                    <p>{car.powerPerLitre} l/100km <img src="../assets/images/icons/fuel_type_ico.png"/>
                                     </p>
                                 </div>
                             </td>
-                            <td>82mm</td>
+                            <td>{car.bore}mm</td>
                             <td>Bore</td>
                         </tr>
                         <tr>
                             <td>Torque</td>
                             <td>
                                 <div>
-                                    <p>400 NM</p>
-                                    <p>1500-4400 RPM <img src="../assets/images/icons/torque_ico.png"/>
+                                    <p>{car.torque} NM</p>
+                                    <p>{car.minTorqueRpm}-{car.maxTorqueRpm} RPM <img src="../assets/images/icons/torque_ico.png"/>
                                     </p>
                                 </div>
                             </td>
                             <td>
                                 4
                             </td>
-                            <td>Cylinders</td>
+                            <td>{car.cylinders}</td>
                         </tr>
                         <tr>
                             <td>Compression ratio</td>
-                            <td>10.2</td>
+                            <td>{car.compressionRate}</td>
                             <td>***</td>
                             <td>other specs..</td>
                         </tr>
