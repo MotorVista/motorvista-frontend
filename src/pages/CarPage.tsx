@@ -1,16 +1,22 @@
 import NavMenu from "../components/NavMenu";
+import Footer from "../components/Footer";
 
 function CarPage (){
     return (
         <>
             <NavMenu></NavMenu>
-            <div id="titleBlock">
+            <div className="titleBlock">
                 <div id="light"></div>
                 <div id="vignette"></div>
                 <div className="content">
                     <img id="icon" src="../assets/images/icons/grsport_ico.png" alt="grsport ico" />
                     <img id="car" src="../assets/images/car_model.png" alt="car model" />
                 </div>
+            </div>
+            <div className="nameBlock">
+                <p>2020 Toyota Supra MK5 A90</p>
+                <div className="line"></div>
+                <p>An impressive car for an impressive people!</p>
             </div>
             <div className="imageBlock leftSide">
                 <div className="vingette"></div>
@@ -129,20 +135,9 @@ function CarPage (){
                 </div>
             </div>
             <div id="priceInfo">
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsпасхалка_лолsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
-                <p>sexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsexsex</p>
+                <p>I have no idea what should be here</p>
             </div>
-            <div id="footer"></div>
+            <Footer></Footer>
         </>
     )
 }
