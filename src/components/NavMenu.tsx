@@ -7,11 +7,17 @@ function NavMenu () {
                     <a href="/">Main page</a>
                 </div>
                 <div className="center">
-                    <a href=""><img src="" alt="Toyota" /></a>
+                    <a href=""><img src="" alt="OmniCars" /></a>
                 </div>
                 <div className="right">
-                    <a href="">Profile</a>
+                    <a href="/auth">Profile</a>
                 </div>
+            </div>
+            <div className="submenu">
+                <a href="/list">Showcase</a>
+                <a href="">Service</a>
+                <a href="">Accessories</a>
+                <a href="">About us</a>
             </div>
         </>
     )

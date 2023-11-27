@@ -20,6 +20,7 @@
     --img-bg: #434447;
     --info-block-bg: #000;
     --sec-block-bg: #2d2e30;
+    --additional-dark-grey: #313335;
     --icons-color: initial;
     --accent-color: #c44b4b;
 }
@@ -34,7 +35,7 @@ body, html {
     color: var(--text-color);
 }
 
-p {
+p, h1, h3 {
     margin: 0;
     padding: 0;
 }
@@ -42,6 +43,18 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button, input {
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
 }
 
 /* Top menu CSS */
@@ -165,16 +178,16 @@ a {
             margin: 0.2vmax 0 0.2vmax 0;
         }
 
-        & button {
+        .button {
             cursor: pointer;
             margin-top: 1.6vmax;
             background: none;
-            outline: none;
             border: 0.15vmax solid var(--accent-color);
             border-radius: 0.4vmax;
             color: var(--accent-color);
             font-size: 1.4vmax;
             padding: 0.5vmax 1vmax;
+            font-weight: bolder;
         }
     }
 
@@ -653,6 +666,152 @@ a {
             .button:before {
                 left: 0;
             }
+        }
+    }
+}
+
+/* Authorization */
+.titleBlock:has(.content .auth) {
+    .header {
+        margin-left: 10%;
+        width: 22vmax;
+    }
+}
+
+.authBlock {
+    position: absolute;
+    right: 7%;
+    width: 50%;
+    max-width: 700px;
+    height: 65%;
+    border-radius: 1vmax;
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0));
+
+    .login, .register {
+        position: absolute;
+        width: 98%;
+        height: 98%;
+        padding: 2%;
+        border-radius: 1vmax;
+        background-color: var(--sec-block-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        transition: .65S;
+
+        & h1 {
+            font-family: 'Aquire Light';
+            font-size: 2vmax;
+            margin-bottom: 0.5vmax;
+        }
+
+        & h3 {
+            font-size: 1.1vmax;
+            font-weight: lighter;
+            color: var(--sec-text-color);
+        }
+
+        & form {
+            margin-top: 2vmax;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #loginPass {
+                -webkit-text-security: disc;
+            }
+
+            #showPass:checked {
+                + #loginPass {
+                    -webkit-text-security: none;
+                }
+
+                ~ #showPassLabel {
+                    display: none;
+                }
+
+                ~ #hidePassLabel {
+                    display: initial;
+                }
+            }
+
+            & input:not([type="submit"]) {
+                background-color: var(--additional-dark-grey);
+                position: relative;
+                border-bottom: 0.165vmax solid var(--accent-color);
+                padding: 0.7vmax 0.3vmax 0.2vmax 0.3vmax;
+                border-radius: 0.2vmax;
+                font-size: 0.9vmax;
+            }
+
+            #showPassLabel, #hidePassLabel {
+                font-size: 1vmax;
+                color: var(--img-block-bg);
+            }
+
+            & input[type="submit"] {
+                margin-top: 2.5vmax;
+                background-color: initial;
+                border: 0.25vmin solid var(--accent-color);
+                border-radius: 0.2vmax;
+                color: var(--accent-color);
+                font-weight: bolder;
+                font-size: 1.1vmax;
+                padding: 0.5vmax 2vmax;
+            }
+
+            & label:not(#hidePassLabel):not(#showPassLabel) {
+                margin: 0.6vmax 0 0.1vmax 0;
+                font-size: 1vmax;
+                color: var(--img-block-bg);
+            }
+        }
+
+        .toRegisterBlock {
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            display: flex;
+            font-size: 1vmax;
+
+            & p {
+                color: var(--sec-text-color);
+            }
+
+            & label {
+                margin-left: 0.3vmax;
+            }
+        }
+    }
+
+    .register {
+        transform: rotate3d(0, 1, 0, 180deg);
+        z-index: 1;
+    }
+
+    #toLogin:checked {
+        ~ .login {
+            transform: rotate3d(0, 1, 0, 0deg);
+            z-index: 2;
+        }
+
+        ~ .register {
+            transform: rotate3d(0, 1, 0, 180deg);
+            z-index: 1;
+        }
+    }
+
+    #toRegister:checked {
+        ~ .login {
+            transform: rotate3d(0, 1, 0, 180deg);
+            z-index: 1;
+        }
+
+        ~ .register {
+            transform: rotate3d(0, 1, 0, 0deg);
+            z-index: 2;
         }
     }
 }

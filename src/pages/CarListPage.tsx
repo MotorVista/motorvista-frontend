@@ -8,7 +8,7 @@ function CarListPage () {
         <div className="listBlock">
             <div className="header">Car showcase</div>
             <div className="companiesList">
-                <a href="/car" className="company">
+                <a href="/vendor" className="company">
                     <img src="../assets/images/toyota_cars.jpg" alt="Toyota" />
                     <div className="textBlock">
                         <span>Toyota</span>

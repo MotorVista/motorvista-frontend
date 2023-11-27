@@ -5,24 +5,18 @@ function Main() {
     return (
         <>
             <NavMenu></NavMenu>
-            <div className="submenu">
-                <a href="/list">Showcase</a>
-                <a href="">Service</a>
-                <a href="">Accessories</a>
-                <a href="">About us</a>
-            </div>
             <div className="titleBlock">
                 <div className="content">
                     <div className="header">
                         <p>Welcome to the Omnicars dealership</p>
                         <div className="line"></div>
                         <div className="links">    
-                            <a className="hover-underline-animation" href="/car">Toyota</a>
+                            <a className="hover-underline-animation" href="/vendor">Toyota</a>
                             <a className="hover-underline-animation" href="">Ford Mustang</a>
                             <a className="hover-underline-animation" href="">Aston Martin</a>
                             <br />
                             <a className="hover-underline-animation" href="">About us</a>
-                            <button>Current Offers</button>
+                            <a href="/list" className="button">Current Offers</a>
                         </div>
                     </div>
                     <div className="images">
