@@ -1,7 +1,57 @@
 import NavMenu from "../components/NavMenu";
 import Footer from "../components/Footer";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import {API, checkResponse} from "../api";
 
 function Auth() {
+    const navigate = useNavigate();
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function onLogin(e) {
+        e.preventDefault();
+        if (!email || !password) {
+            alert("No email or password!");
+            return;
+        }
+
+        API.post("/login", { email, password })
+            .then((res) => {
+                if (checkResponse(res)) {
+                    navigate("/");
+                } else {
+                    alert("Invalid email or password");
+                }
+            })
+            .catch(e => alert(e));
+    }
+
+    function onRegister(e) {
+        e.preventDefault();
+        if (!email || !password) {
+            alert("No email or password!");
+            return;
+        }
+
+        API.post("/register", {
+            email,
+            password,
+            firstName: name,
+            lastName: ""
+        })
+            .then((res) => {
+                if (checkResponse(res)) {
+                    navigate("/");
+                } else {
+                    alert("Invalid email or password");
+                }
+            })
+            .catch(e => alert(e));
+    }
+
     return (
         <>
         <NavMenu></NavMenu>
@@ -27,13 +77,13 @@ function Auth() {
                         <h3>to gain access for more functions</h3>
                         <form action="">
                             <label htmlFor="loginEmail">Email:</label>
-                            <input type="email" id="loginEmail"/>
+                            <input onChange={e => setEmail(e.target.value)} type="email" id="loginEmail"/>
                             <input type="checkbox" name="showPass" id="showPass" hidden/>
                             <label htmlFor="loginPass">Password:</label>
-                            <input type="text" id="loginPass" />
+                            <input onChange={e => setPassword(e.target.value)} type="text" id="loginPass" />
                             <label htmlFor="showPass" id="showPassLabel">Show password</label>
                             <label htmlFor="showPass" id="hidePassLabel" hidden>Hide password</label>
-                            <input type="submit" value="Login" />
+                            <input onClick={onLogin} type="button" value="Login" />
                         </form>
                         <div className="toRegisterBlock">
                             <p>Don't have an account yet?</p>
@@ -45,17 +95,17 @@ function Auth() {
                         <h3>to gain access for more functions</h3>
                         <form action="">
                             <label htmlFor="regName">Name:</label>
-                            <input type="text" id="regName"/>
+                            <input onChange={e => setName(e.target.value)} type="text" id="regName"/>
                             <label htmlFor="regEmail">Email:</label>
-                            <input type="email" id="regEmail"/>
+                            <input onChange={e => setEmail(e.target.value)} type="email" id="regEmail"/>
                             <input type="checkbox" name="showRegPass" id="showRegPass" hidden/>
                             <label htmlFor="regPass">Password:</label>
-                            <input type="password" id="regPass" />
+                            <input onChange={e => setPassword(e.target.value)} type="password" id="regPass" />
                             <label htmlFor="confRegPass">Confirm password:</label>
                             <input type="password" id="confRegPass" />
                             <label htmlFor="showRegPass" id="showPassLabel2">Show passwords</label>
                             <label htmlFor="showRegPass" id="hidePassLabel3" hidden>Hide passwords</label>
-                            <input type="submit" value="Submit" />
+                            <input onClick={onRegister} type="button" value="Submit" />
                         </form>
                         <div className="toRegisterBlock">
                             <p>Already have an account?</p>
