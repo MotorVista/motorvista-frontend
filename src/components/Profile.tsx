@@ -1,4 +1,18 @@
+import { API, checkResponse } from "../api";
+
 function Profile () {
+    function onLogout() {
+        API.delete("/login")
+            .then((res) => {
+                if (checkResponse(res)) {
+                    alert("Logged out");
+                } else {
+                    alert("You are unauthorized");
+                }
+            })
+            .catch(e => alert(e));
+    }
+
     return (
         <>
         <div className="profile">
@@ -38,7 +52,7 @@ function Profile () {
                 </div>
             </div>
             <div className="profileBottom">
-                <a>Log out</a>
+                <a onClick={onLogout}>Log out</a>
             </div>
         </div>
         </>

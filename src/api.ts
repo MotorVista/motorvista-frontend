@@ -7,5 +7,5 @@ export const API = axios.create({
 });
 
 export function checkResponse(res: AxiosResponse): boolean {
-    return !res.data?.error;
+    return res.data || !res.data?.error;
 }
