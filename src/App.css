@@ -779,7 +779,7 @@ label {
                 }
             }
 
-            & input:not([type="submit"]) {
+            & input:not([type="button"]) {
                 background-color: var(--additional-dark-grey);
                 position: relative;
                 border-bottom: 0.165vmax solid var(--accent-color);
@@ -793,7 +793,7 @@ label {
                 color: var(--img-block-bg);
             }
 
-            & input[type="submit"] {
+            & input[type="button"] {
                 margin-top: 2.5vmax;
                 background-color: initial;
                 border: 0.25vmin solid var(--accent-color);
@@ -994,5 +994,16 @@ label {
     .profileBottom {
         position: absolute;
         bottom: 1vmax;
+
+        & button {
+            color: var(--text-color);
+            background: none;
+            font-size: 1.1vmax;
+            transition: .2s;
+
+            &:hover {
+                filter: brightness(70%);
+            }
+        }
     }
 }

@@ -52,7 +52,7 @@ function Profile () {
                 </div>
             </div>
             <div className="profileBottom">
-                <a onClick={onLogout}>Log out</a>
+                <button onClick={onLogout}>Log out</button>
             </div>
         </div>
         </>
