@@ -1,5 +1,6 @@
 import NavMenu from "../components/NavMenu";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 function Main() {
     return (
@@ -20,9 +21,9 @@ function Main() {
                         </div>
                     </div>
                     <div className="images">
-                        <a href="/car">
+                        <Link to="/car/1">
                             <img src="../assets/images/toyota_cars.jpg" alt="Toyota" />
-                        </a>
+                        </Link>
                         <a>
                             <img src="../assets/images/ford_mustang_cars.jpg" alt="Ford Mustang" />
                         </a>

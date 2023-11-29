@@ -1,25 +1,15 @@
 import NavMenu from "../components/NavMenu";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { API, checkResponse } from "../api";
+import { ICar, EMPTY_CAR } from "../entity/ICar";
 
 function CarPage (){
-    const [car, setCar] = useState({
-        power: undefined,
-        year: undefined,
-        model: undefined,
-        variation: undefined,
-        powerPerLitre: undefined,
-        bore: undefined,
-        torque: undefined,
-        stroke: undefined,
-        minTorqueRpm: undefined,
-        maxTorqueRpm: undefined,
-        cylinders: undefined,
-        compressionRate: undefined
-    });
+    const { id } = useParams();
+    const [car, setCar] = useState<ICar>(EMPTY_CAR);
     useEffect(() => {
-        API.get("/car/1").then((res) => {
+        API.get(`/car/id`).then((res) => {
             if (checkResponse(res)) {
                 setCar(res.data);
             }
