@@ -82,6 +82,9 @@ label {
 /* Top menu CSS */
 
 #menuBar {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: var(--menu-bg);
     width: calc(100% - 6vmax);
     height: 8.5vmin;
@@ -91,6 +94,7 @@ label {
     padding: 0 3vmax 0 3vmax;
     color: var(--text-color);
     font-size: 1.2vmax;
+    z-index: 15;
 
     .left * {
         margin-right: 1vmax;
@@ -583,6 +587,9 @@ label {
 /* Main page */
 
 .submenu {
+    position: sticky;
+    top: 8.5vmin;
+    left: 0;
     background-color: var(--sec-block-bg);
     width: calc(100% - 3vmax);
     height: 7vmin;
@@ -591,6 +598,7 @@ label {
     font-size: 1.7vmin;
     display: flex;
     align-items: center;
+    z-index: 14;
 
     & * {
         margin-right: 3vmin;
@@ -862,7 +870,7 @@ label {
     display: flex;
     background-color: var(--menu-bg);
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     right: -100%;
     top: 8.5vmin;
     width: 28vmax;
