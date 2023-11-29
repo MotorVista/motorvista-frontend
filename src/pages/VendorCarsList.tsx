@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import NavMenu from "../components/NavMenu";
+import { Link } from "react-router-dom";
 
 function VendorCarsList () {
     return (
@@ -8,7 +9,7 @@ function VendorCarsList () {
         <div className="listBlock">
             <div className="header">Toyota cars showcase</div>
             <div className="companiesList">
-                <a href="/car" className="company">
+                <a href="/car/1" className="company">
                     <img src="../assets/images/supra.png" alt="Toyota" />
                     <div className="textBlock">
                         <span>2020 Toyota Supra MK5 A90</span>

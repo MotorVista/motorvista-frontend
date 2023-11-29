@@ -21,7 +21,7 @@ function Main() {
                         </div>
                     </div>
                     <div className="images">
-                        <Link to="/car/1">
+                        <Link to="/list/">
                             <img src="../assets/images/toyota_cars.jpg" alt="Toyota" />
                         </Link>
                         <a>

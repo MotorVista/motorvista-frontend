@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import NavMenu from "../components/NavMenu";
+import { Link } from "react-router-dom";
 
 function CarListPage () {
     return (
@@ -8,7 +9,7 @@ function CarListPage () {
         <div className="listBlock">
             <div className="header">Car showcase</div>
             <div className="companiesList">
-                <a href="/vendor" className="company">
+                <a href="/vendor/" className="company">
                     <img src="../assets/images/toyota_cars.jpg" alt="Toyota" />
                     <div className="textBlock">
                         <span>Toyota</span>
