@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Main />}></Route>
-        <Route path="car" element={<CarPage />}></Route>
+        <Route path="car/:id" element={<CarPage />}></Route>
         <Route path="list" element={<CarListPage />}></Route>
         <Route path="auth" element={<Auth />}></Route>
         <Route path="vendor" element={<VendorCarsList />}></Route>
