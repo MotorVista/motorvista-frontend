@@ -38,7 +38,7 @@ function Profile () {
                 </div>
             </div>
             <div className="profileBottom">
-                <a>Log out</a>
+                <button>Log out</button>
             </div>
         </div>
         </>
