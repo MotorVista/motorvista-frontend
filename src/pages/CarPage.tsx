@@ -149,7 +149,14 @@ function CarPage (){
                 </div>
             </div>
             <div id="priceInfo">
-                <p>I have no idea what should be here</p>
+                <div>
+                    <p>
+                        After clicking the next button, you agree to the processing of your personal data 
+                        specified in your registration profile. Your order will be marked by a manager 
+                        within the next 24 hours. Our manager will contact you.
+                    </p>
+                </div>
+                    <a href="">Place order</a>
             </div>
             <Footer></Footer>
         </>
