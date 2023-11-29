@@ -1,3 +1,5 @@
+import Profile from "./Profile";
+
 function NavMenu () {
     return(
         <>
@@ -10,7 +12,9 @@ function NavMenu () {
                     <a href=""><img src="" alt="OmniCars" /></a>
                 </div>
                 <div className="right">
-                    <a href="/auth">Profile</a>
+                    <input type="checkbox" name="profileOpnCls" id="profileOpnCls" hidden/>
+                    <label htmlFor="profileOpnCls"><a>Profile</a></label>
+                    <Profile></Profile>
                 </div>
             </div>
             <div className="submenu">

@@ -23,9 +23,25 @@
     --additional-dark-grey: #313335;
     --icons-color: initial;
     --accent-color: #c44b4b;
+    --profile-block-bg: #121212;
 }
 
-body, html {
+.lightTheme {
+    --text-color: #000;
+    --sec-text-color: #4b4747;
+    --menu-bg: #dfdfdf;
+    --title-block-bg: #f1f1f1;
+    --img-block-bg: #aaaaaa;
+    --img-bg: #b4b4b4;
+    --info-block-bg: #f0f0f0;
+    --sec-block-bg: #c2c2c2;
+    --additional-dark-grey: #cccccc;
+    --icons-color: brightness(0%);
+    --accent-color: #d47575;
+    --profile-block-bg: #d1d1d1;
+}
+
+body, html, #root {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -33,6 +49,7 @@ body, html {
     background-color: var(--menu-bg);
     font-family: 'Calibri';
     color: var(--text-color);
+    transition: .2s;
 }
 
 p, h1, h3 {
@@ -43,6 +60,12 @@ p, h1, h3 {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        filter: brightness(70%);
+    }
 }
 
 button, input {
@@ -813,5 +836,144 @@ label {
             transform: rotate3d(0, 1, 0, 0deg);
             z-index: 2;
         }
+    }
+}
+
+/* Profile */
+#profileOpnCls:checked {
+    ~ .profile {
+        display: flex;
+        right: 0;
+    }
+}
+
+.profile {
+    display: flex;
+    background-color: var(--menu-bg);
+    overflow: hidden;
+    position: absolute;
+    right: -100%;
+    top: 8.5vmin;
+    width: 28vmax;
+    padding: 1vmax;
+    max-width: 100%;
+    height: 33vmax;
+    max-height: 80%;
+    border-radius: 0 0 0.7vmax 0.7vmax;
+    z-index: 20;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    transition: .65s ease-in-out;
+
+    .profileParent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.25vmax;
+        margin-bottom: 0.45vmax;
+
+        &:nth-child(4) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .profileBlock{
+        min-height: 5vmax;
+        background-color: var(--profile-block-bg);
+        margin: 0.25vmax;
+        border-radius: 0.5vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0 0.5vmax;
+        color: var(--sec-text-color);
+        font-size: 1.1vmax;
+
+        & p:nth-child(2) {
+            font-size: 1vmax;
+            font-weight: lighter;
+            filter: brightness(90%);
+        }
+    }
+
+    .profileBlockBig {
+        grid-column: span 2;
+        min-height: 5vmax;
+        background-color: var(--profile-block-bg);
+        margin: 0.25vmax;
+        border-radius: 0.5vmax;
+        overflow: hidden;
+        padding: 0.5vmax 0.5vmax;
+        color: var(--sec-text-color);
+        font-size: 1.1vmax;
+
+        & p:nth-child(2), p:nth-child(3) {
+            font-size: 1vmax;
+            font-weight: lighter;
+            filter: brightness(90%);
+        }
+
+        & p:nth-child(3) {
+            filter: brightness(60%);
+        }
+
+        & form {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .changePass {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 2vmax;
+    }
+
+    & input:not([type="submit"]) {
+        width: 45%;
+        background-color: rgba(255, 255, 255, 0.02);
+        position: relative;
+        border-bottom: 0.165vmax solid var(--accent-color);
+        padding: 0.7vmax 0.3vmax 0.2vmax 0.3vmax;
+        border-radius: 0.2vmax;
+        font-size: 0.9vmax;
+
+        &:nth-child(2) {
+            margin-right: 0.55vmax;
+        }
+    }
+
+    & label {
+        position: absolute;
+        bottom: 100%;
+        left: 3%;
+        margin: 0.6vmax 0 0.1vmax 0;
+        font-size: 0.8vmax;
+        color: var(--img-block-bg);
+        z-index: 30;
+
+        &:nth-child(3) {
+            left: 53%;
+        }
+    }
+
+    & input[type="submit"] {
+        width: 8vmax;
+        margin-top: 0.4vmax;
+        background-color: initial;
+        color: var(--accent-color);
+        font-weight: bolder;
+        font-size: 0.9vmax;
+        padding: 0.5vmax 2vmax;
+    }
+
+    .profileBottom {
+        position: absolute;
+        bottom: 1vmax;
     }
 }
